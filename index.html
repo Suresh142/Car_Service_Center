@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<title>Car Service Center</title>
+    <link rel="icon" href="http://localhost/car_service_center/uploads/1664172600_logo[1].jpg" />
+    <!-- Google Font: Source Sans Pro -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback"> -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://localhost/car_service_center/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <!-- <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="http://localhost/car_service_center/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+      <!-- DataTables -->
+  <link rel="stylesheet" href="http://localhost/car_service_center/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="http://localhost/car_service_center/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="http://localhost/car_service_center/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+   <!-- Select2 -->
+  <link rel="stylesheet" href="http://localhost/car_service_center/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="http://localhost/car_service_center/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="http://localhost/car_service_center/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="http://localhost/car_service_center/plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="http://localhost/car_service_center/dist/css/adminlte.css">
+    <link rel="stylesheet" href="http://localhost/car_service_center/dist/css/custom.css">
+    <link rel="stylesheet" href="http://localhost/car_service_center/assets/css/styles.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="http://localhost/car_service_center/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="http://localhost/car_service_center/plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="http://localhost/car_service_center/plugins/summernote/summernote-bs4.min.css">
+     <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="http://localhost/car_service_center/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <style type="text/css">/* Chart.js */
+      @keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}.chartjs-render-monitor{animation:chartjs-render-animation 1ms}.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink{position:absolute;direction:ltr;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1}.chartjs-size-monitor-expand>div{position:absolute;width:1000000px;height:1000000px;left:0;top:0}.chartjs-size-monitor-shrink>div{position:absolute;width:200%;height:200%;left:0;top:0}
+    </style>
+
+     <!-- jQuery -->
+    <script src="http://localhost/car_service_center/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="http://localhost/car_service_center/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="http://localhost/car_service_center/plugins/sweetalert2/sweetalert2.min.js"></script>
+    <!-- Toastr -->
+    <script src="http://localhost/car_service_center/plugins/toastr/toastr.min.js"></script>
+    <script>
+        var _base_url_ = 'http://localhost/car_service_center/';
+    </script>
+    <script src="http://localhost/car_service_center/dist/js/script.js"></script>
+    <script src="http://localhost/car_service_center/assets/js/scripts.js"></script>
+    <style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        font-family: Apple Chancery, cursive;
+    }
+    #main-header{
+        position:relative;
+        background: rgb(0,0,0)!important;
+        background: radial-gradient(circle, rgba(0,0,0,0.48503151260504207) 22%, rgba(0,0,0,0.39539565826330536) 49%, rgba(0,212,255,0) 100%)!important;
+        height:70vh;
+    }
+    #main-header:before{
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-image:url(http://localhost/car_service_center/uploads/1664171220_aaadad.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        filter: drop-shadow(0px 7px 6px black);
+        z-index:-1;
+    }
+
+ </style>
+  </head><body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="topNavBar">
+            <div class="container px-4 px-lg-5 ">
+                <button class="navbar-toggler btn btn-sm" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <a class="navbar-brand" href="./">
+                <img src="http://localhost/car_service_center/uploads/1664172600_logo[1].jpg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                CSC-IT Dreamer&apos;s                </a>
+
+                <!-- <form class="form-inline" id="search-form">
+                  <div class="input-group">
+                    <input class="form-control form-control-sm form " type="search" placeholder="Search" aria-label="Search" name="search"  value=""  aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-success btn-sm m-0" type="submit" id="button-addon2"><i class="fa fa-search"></i></button>
+                    </div>
+                  </div>
+                </form> -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="./">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./?p=about">About Us</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                    </div>
+                </div>
+            </div>
+        </nav>
+<script>
+  $(function(){
+    $('#login-btn').click(function(){
+      uni_modal("","login.php")
+    })
+    $('#navbarResponsive').on('show.bs.collapse', function () {
+        $('#mainNav').addClass('navbar-shrink')
+    })
+    $('#navbarResponsive').on('hidden.bs.collapse', function () {
+        if($('body').offset.top == 0)
+          $('#mainNav').removeClass('navbar-shrink')
+    })
+  })
+
+  $('#search-form').submit(function(e){
+    e.preventDefault()
+     var sTxt = $('[name="search"]').val()
+     if(sTxt != '')
+      location.href = './?p=products&search='+sTxt;
+  })
+</script> <!-- Header-->
+ <header class="bg-dark py-5" id="main-header">
+    <div class="container h-100 d-flex align-items-end justify-content-center w-100">
+        <div class="text-center text-white w-100">
+            <h1 class="display-4 fw-bolder">Car Service Center</h1>
+            <p class="lead fw-normal text-white-50 mb-0">We will take care of your car</p>
+            <div class="col-auto mt-2">
+                <button class="btn btn-primary btn-lg rounded-0" id="send_request" type="button">Send Service Request</button>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="text-center">We Do Service For:</h3>
+                <hr class="bg-primary opacity-100">
+                <ul class="list-group">
+                                        <li class="list-group-item"><b>Compact car</b></li>
+                                        <li class="list-group-item"><b>Hatchback</b></li>
+                                        <li class="list-group-item"><b>Luxury car</b></li>
+                                        <li class="list-group-item"><b>Minivan</b></li>
+                                        <li class="list-group-item"><b>Sports car</b></li>
+                                    </ul>
+            </div>
+            <div class="col-md-8">
+                <h3 class="text-center">Our Services</h3>
+                <hr class="bg-primary opacity-100">
+                <div class="form-group">
+                <div class="input-group mb-3">
+                    <input type="search" id="search" class="form-control" placeholder="Search Service Here" aria-label="Search Service Here" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <span class="input-group-text bg-primary" id="basic-addon2"><i class="fa fa-search"></i></span>
+                    </div>
+                </div>
+                </div>
+                <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-2" id="service_list">
+                                        <a class="col item text-decoration-none text-dark view_service" href="javascript:void(0)" data-id="1">
+                        <div class="callout callout-primary border-primary rounded-0">
+                            <dl>
+                                <dt>Change Oil</dt>
+                                <dd class="truncate-3 text-muted lh-1"><small>An Oil Change is the act of&nbsp;removing the used oil in your engine&nbsp;and replacing it with new, clean oil. Over time, oil breaks down and gets dirty. These factors make oil much less slippery and less effective at their job of lubricating engine parts.﻿</small></dd>
+                            </dl>
+                        </div>
+                    </a>
+                                        <a class="col item text-decoration-none text-dark view_service" href="javascript:void(0)" data-id="2">
+                        <div class="callout callout-primary border-primary rounded-0">
+                            <dl>
+                                <dt>Engine Tune Up</dt>
+                                <dd class="truncate-3 text-muted lh-1"><small>Doing an engine tune-up isn’t as common as it used to be, but it’s not lost in time. While today’s cars are loaded with all kinds of sensors and highly regulated ECUs, you still want to go ahead and perform a tune-up every now and again. At the very least, it’s a way to bond with your car and get you under the hood and give you a better understanding of how everything works in harmony to provide motion.&nbsp;</small></dd>
+                            </dl>
+                        </div>
+                    </a>
+                                        <a class="col item text-decoration-none text-dark view_service" href="javascript:void(0)" data-id="3">
+                        <div class="callout callout-primary border-primary rounded-0">
+                            <dl>
+                                <dt>Overall Checkup</dt>
+                                <dd class="truncate-3 text-muted lh-1"><small>The inspector must check the belt operations. The inspector must also check the hoses for any leaks or other issues. The inspector must check the exhaust manifold, tailpipes, muffler, and catalytic converter for damage, leaks or cracks. All these are part of a full&nbsp;car&nbsp;inspection checklist.</small></dd>
+                            </dl>
+                        </div>
+                    </a>
+                                        <a class="col item text-decoration-none text-dark view_service" href="javascript:void(0)" data-id="4">
+                        <div class="callout callout-primary border-primary rounded-0">
+                            <dl>
+                                <dt>Tire Replacement</dt>
+                                <dd class="truncate-3 text-muted lh-1"><small>All tires have tire descriptions written on the sidewall. These consist of a series of letters and numbers which could look something like one of these:P225 / 60 R16 94TP205 / 55 R19 92S M+S215/45R17 91VTo most people, these are just a meaningless array of letters and numbers, however to the informed mechanic or car enthusiast they provide crucial information about the expected performance and suitability of the tire for any given vehicle.Whether you are looking for a&nbsp;smooth silent tire&nbsp;or something that will improve your vehicles handling and performance understanding tire descriptions can help you get the best out of your vehicle</small></dd>
+                            </dl>
+                        </div>
+                    </a>
+                                        <a class="col item text-decoration-none text-dark view_service" href="javascript:void(0)" data-id="5">
+                        <div class="callout callout-primary border-primary rounded-0">
+                            <dl>
+                                <dt>Wash</dt>
+                                <dd class="truncate-3 text-muted lh-1"><small>Eco friendly car washing service 99.9%</small></dd>
+                            </dl>
+                        </div>
+                    </a>
+                                    </div>
+                <div id="noResult" style="display:none" class="text-center"><b>No Result</b></div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    $(function(){
+        $('#search').on('input',function(){
+            var _search = $(this).val().toLowerCase().trim()
+            $('#service_list .item').each(function(){
+                var _text = $(this).text().toLowerCase().trim()
+                    _text = _text.replace(/\s+/g,' ')
+                    console.log(_text)
+                if((_text).includes(_search) == true){
+                    $(this).toggle(true)
+                }else{
+                    $(this).toggle(false)
+                }
+            })
+            if( $('#service_list .item:visible').length > 0){
+                $('#noResult').hide('slow')
+            }else{
+                $('#noResult').show('slow')
+            }
+        })
+        $('#service_list .item').hover(function(){
+            $(this).find('.callout').addClass('shadow')
+        })
+        $('#service_list .view_service').click(function(){
+            uni_modal("Service Details","view_service.php?id="+$(this).attr('data-id'),'mid-large')
+        })
+        $('#send_request').click(function(){
+            uni_modal("Fill the Service Request Form","send_request.php",'large')
+        })
+
+    })
+    $(document).scroll(function() { 
+        $('#topNavBar').removeClass('bg-transparent navbar-dark bg-primary')
+        if($(window).scrollTop() === 0) {
+           $('#topNavBar').addClass('navbar-dark bg-transparent')
+        }else{
+           $('#topNavBar').addClass('navbar-dark bg-primary')
+        }
+    });
+    $(function(){
+        $(document).trigger('scroll')
+    })
+</script><script>
+  $(document).ready(function(){
+    $('#p_use').click(function(){
+      uni_modal("Privacy Policy","policy.php","mid-large")
+    })
+     window.viewer_modal = function($src = ''){
+      start_loader()
+      var t = $src.split('.')
+      t = t[1]
+      if(t =='mp4'){
+        var view = $("<video src='"+$src+"' controls autoplay></video>")
+      }else{
+        var view = $("<img src='"+$src+"' />")
+      }
+      $('#viewer_modal .modal-content video,#viewer_modal .modal-content img').remove()
+      $('#viewer_modal .modal-content').append(view)
+      $('#viewer_modal').modal({
+              show:true,
+              backdrop:'static',
+              keyboard:false,
+              focus:true
+            })
+            end_loader()  
+
+  }
+    window.uni_modal = function($title = '' , $url='',$size=""){
+        start_loader()
+        $.ajax({
+            url:$url,
+            error:err=>{
+                console.log()
+                alert("An error occured")
+            },
+            success:function(resp){
+                if(resp){
+                    $('#uni_modal .modal-title').html($title)
+                    $('#uni_modal .modal-body').html(resp)
+                    if($size != ''){
+                        $('#uni_modal .modal-dialog').addClass($size+'  modal-dialog-centered')
+                    }else{
+                        $('#uni_modal .modal-dialog').removeAttr("class").addClass("modal-dialog modal-md modal-dialog-centered")
+                    }
+                    $('#uni_modal').modal({
+                      show:true,
+                      backdrop:'static',
+                      keyboard:false,
+                      focus:true
+                    })
+                    end_loader()
+                }
+            }
+        })
+    }
+    window._conf = function($msg='',$func='',$params = []){
+       $('#confirm_modal #confirm').attr('onclick',$func+"("+$params.join(',')+")")
+       $('#confirm_modal .modal-body').html($msg)
+       $('#confirm_modal').modal('show')
+    }
+  })
+</script>
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+            <div class="container">
+              <p class="m-0 text-center text-white">Copyright &copy; CSC-IT Dreamer&apos;s 2022</p>
+              <p class="m-0 text-center text-white">Developed By: <a href="mailto:sureshkumardp48@gmail.com">Suresh Kumar</a></p>
+          </div>
+        </footer>
+
+   
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+      $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="http://localhost/car_service_center/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="http://localhost/car_service_center/plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="http://localhost/car_service_center/plugins/sparklines/sparkline.js"></script>
+    <!-- Select2 -->
+    <script src="http://localhost/car_service_center/plugins/select2/js/select2.full.min.js"></script>
+    <!-- JQVMap -->
+    <script src="http://localhost/car_service_center/plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="http://localhost/car_service_center/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="http://localhost/car_service_center/plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="http://localhost/car_service_center/plugins/moment/moment.min.js"></script>
+    <script src="http://localhost/car_service_center/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="http://localhost/car_service_center/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="http://localhost/car_service_center/plugins/summernote/summernote-bs4.min.js"></script>
+    <script src="http://localhost/car_service_center/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="http://localhost/car_service_center/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="http://localhost/car_service_center/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="http://localhost/car_service_center/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <!-- <script src="http://localhost/car_service_center/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script> -->
+    <!-- AdminLTE App -->
+    <script src="http://localhost/car_service_center/dist/js/adminlte.js"></script>
+    <div class="daterangepicker ltr show-ranges opensright">
+      <div class="ranges">
+        <ul>
+          <li data-range-key="Today">Today</li>
+          <li data-range-key="Yesterday">Yesterday</li>
+          <li data-range-key="Last 7 Days">Last 7 Days</li>
+          <li data-range-key="Last 30 Days">Last 30 Days</li>
+          <li data-range-key="This Month">This Month</li>
+          <li data-range-key="Last Month">Last Month</li>
+          <li data-range-key="Custom Range">Custom Range</li>
+        </ul>
+      </div>
+      <div class="drp-calendar left">
+        <div class="calendar-table"></div>
+        <div class="calendar-time" style="display: none;"></div>
+      </div>
+      <div class="drp-calendar right">
+        <div class="calendar-table"></div>
+        <div class="calendar-time" style="display: none;"></div>
+      </div>
+      <div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div>
+    </div>
+    <div class="jqvmap-label" style="display: none; left: 1093.83px; top: 394.361px;">Idaho</div><div class="modal fade" id="confirm_modal" role='dialog'>
+    <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title">Confirmation</h5>
+      </div>
+      <div class="modal-body">
+        <div id="delete_content"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id='confirm' onclick="">Continue</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="uni_modal" role='dialog'>
+    <div class="modal-dialog   rounded-0 modal-md modal-dialog-centered" role="document">
+      <div class="modal-content  rounded-0">
+        <div class="modal-header">
+        <h5 class="modal-title"></h5>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id='submit' onclick="$('#uni_modal form').submit()">Save</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="uni_modal_right" role='dialog'>
+    <div class="modal-dialog  rounded-0 modal-full-height  modal-md" role="document">
+      <div class="modal-content rounded-0">
+        <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="fa fa-arrow-right"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="viewer_modal" role='dialog'>
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+              <button type="button" class="btn-close" data-dismiss="modal"><span class="fa fa-times"></span></button>
+              <img src="" alt="">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
